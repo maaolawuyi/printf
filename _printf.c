@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 			{
 				char c = va_arg(my_list, int);
+
 				write(1, &c, 1);
 				num_chara_print++;
 			}
