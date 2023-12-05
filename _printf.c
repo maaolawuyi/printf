@@ -31,18 +31,18 @@ int _printf(const char *format, ...)
 				break;
 			}
 
-			if (format == '%')
+			if (*format == '%')
 			{
 				write(1, format, 1);
 				num_chara_print++;
 			}
-			else if (format == 'c')
+			else if (*format == 'c')
 			{
 				char c = va_arg(my_list, int);
 				write(1, &c, 1);
 				num_chara_print++;
 			}
-			else if (format == 's')
+			else if (*format == 's')
 			{
 				char *str = va_arg(my_list, char*);
 				int i = 0;
