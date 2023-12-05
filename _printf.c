@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 				while (str[i] != '\0')
 					i++;
 
-				write(i, str, i);
+				write(1, str, i);
 				num_chara_print += i;
 			}
 		}
