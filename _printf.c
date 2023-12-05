@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			if (format == '\0')
+			if (*format == '\0')
 			{
 				break;
 			}
@@ -47,11 +47,11 @@ int _printf(const char *format, ...)
 				char *str = va_arg(my_list, char*);
 				int i = 0;
 
-				while (str[i] != ''\0)
+				while (str[i] != '\0')
 					i++;
 
 				write(i, str, i);
-				num_chra_print += i;
+				num_chara_print += i;
 			}
 		}
 
